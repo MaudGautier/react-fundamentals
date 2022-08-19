@@ -20,11 +20,19 @@
     //     <div className="message">Goodbye World</div>
     //   </div>
     // )
+    // // Classic
+    // const element = (
+    //   <div className="container">
+    //     {message({children: 'Hello World'})}
+    //     {message({children: 'Goodbye World'})}
+    //   </div>
+    // )
+    // // Extra 1
     const element = (
-            <div className="container">
-              {message({children: 'Hello World'})}
-              {message({children: 'Goodbye World'})}
-            </div>
+      <div className="container">
+        {React.createElement(message, {children: 'Hello World'})}
+        {React.createElement(message, {children: 'Goodbye World'})}
+      </div>
     )
 
 
